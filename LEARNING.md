@@ -78,3 +78,50 @@ que o `flex-direction` seja `row`
 que o `flex-direction` seja `row`
 - `align-content` permite o alinhamento dos items em um container flex com `flex-wrap`
 - o .editorconfig é um arquivo com configurações para o nosso code editor
+
+## Aula 6
+
+-  a tag `main` só é permitida ter 1 por página HTML
+- a tag `section` nos permite dividir o conteúdo em seções em nível mais geral
+- a tag `article` serve para separar blocos de informações em um nível mais específico
+- é uma boa prática nomear as imagens e links com nomes mais descritíveis possível
+- um component agrupa conteúdo e comportamento que façam sentido em estarem juntos
+- `overflow: hidden` faz com que o conteúdo que ultrapassar as dimensões do elemento 
+seja cortado
+- utilizamos imagens como `background-image` para imagens que não se remetem ao conteúdo, ou
+seja, meramente ilustrativas
+- utilizamos imagens com a tag `img`, imagens que se remetem ao conteúdo
+- um elemento `position: absolute` se posiciona relativamente ao elemento 
+ancestral mais próximo com `position: relative` declarado
+- utilizamos as propriedades `top`, `right`, `bottom`, `left` para posicionar um 
+elemento absoluto
+- a propriedade `z-index` nos permite alteral o nível de profundidade de um elemento,
+ou seja, altera o eixo z
+- só conseguimos alterar o `z-index` se ao menos nosso elemento tiver o `position` relative
+ou absolute
+- `object-fit: cover` tem o mesmo efeito que `background-size: cover`, porém em
+um elemento `img`
+
+## Aula 7
+
+- a função `rgba(red, green, blue, alpha)` permite declarar uma cor com transparência
+- utilize `aria-hidden="true"` em elementos abertos sem conteúdo para que o leitor de tela
+não interprete o elemento
+- ARIA é a API de acessibilidade do HTML
+- os pseudo-elementos nos permitem aplicar estilo em um conteúdo interno de um elemento,
+por exemplo: `::firs-letter` primeira letra, `::first-line` primeira linha, `::selection` 
+que é o conteúdo selecionado pelo cursor
+- com os pseudo-elementos `::before` e `::after` devemos declarar a propriedade `content`
+- `::before` e `::after` por padrão tem o `display: inline`
+
+## Aula 8
+
+- o grid layout provê um modo eficiente de dispor, alinhar e distribuir espaçamento 
+entre linhas e colunas contidas em um elemento com `display-grid`
+- o grid layout é bidirecional, ou seja só conseguimos trabalhar com os dois eixos 
+(x para linhas e y para colunas) ao mesmo tempo
+- através da função `repeat` conseguimos repetir dimensões das linhas e colunas
+- a propriedade `gap` permite declarar a distância entre linhas e colunas
+- idealmente criamos classe com estilos desacoplados para reutilização de 
+código, exemplo: classe `.grid` sabe estilizar um grid, classe `.grid-col-2`
+diz quantas colunas tem o grid

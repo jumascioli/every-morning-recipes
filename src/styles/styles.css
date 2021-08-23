@@ -25,10 +25,20 @@ h6 {
    font-family: 'Raleway';
 }
 
+a {
+  outline: none;
+}
+
 body {
    background-color: #E1E1CF;
    font-family: 'Cabin';
    margin: 0;
+}
+
+.wrapper {
+  margin: 20px auto;
+  max-width: 1000px;
+  width: 70%;
 }
 
 .header{
@@ -40,9 +50,7 @@ body {
    background-position: center center;
    border-radius: 8px;
    color: #FFF;
-   margin: 20px auto;
-   padding: 30px 70px 20px;
-   width: 70%;
+   padding: 30px 70px 16px;
 }
 
 .header-title {
@@ -85,4 +93,86 @@ body {
 
 .social-media-link:focus, .social-media-link:hover {
    opacity: 0.6;
+}
+
+.card-highlight {
+  border-radius: 8px;
+  color: #FFF;
+  display: flex;
+  height: 40vh;
+  overflow: hidden;
+  padding: 16px 32px;
+  position: relative;
+}
+
+.overlay::before {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.overlay-yellow::before {
+  background-color: rgba(215, 215, 98, 0.6);
+}
+
+.overlay-red::before {
+  background-color: rgba(185, 82, 59, 0.6);
+}
+
+.card-highlight-info {
+  align-self: flex-end;
+  position: relative;
+  z-index: 2;
+}
+
+.card-highlight-image {
+  
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card-highlight-title {
+  color: #FFF;
+  font-size: 36px;
+  text-decoration: none;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.author-image {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+}
+
+.author-link {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.author-link:focus, .author-link:hover {
+  text-decoration: underline;
+}
+
+.grid {
+  display: grid;
+    gap: 20px;
+}
+
+.grid-col-2 {
+  grid-template-columns: repeat(2, 1fr);
 }
