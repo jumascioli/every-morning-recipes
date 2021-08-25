@@ -16,17 +16,14 @@
    src: url(../assets/fonts/cabin-v18-latin-regular.woff2) format('woff2');
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
    font-family: 'Raleway';
 }
 
 a {
+  color: inherit;
   outline: none;
+  text-decoration: none;
 }
 
 body {
@@ -55,7 +52,7 @@ body {
 
 .header-title {
    font-size: 48px;
-   letter-spacing: 1px;
+   letter-spacing: 1.5px;
    margin-bottom: 4px;
    text-transform: uppercase;
    width: 260px;
@@ -105,6 +102,10 @@ body {
   position: relative;
 }
 
+.overlay {
+  position: relative;
+}
+
 .overlay::before {
   content: '';
   display: block;
@@ -146,6 +147,37 @@ body {
   text-decoration: none;
 }
 
+.card {
+  background-color: #FFF;
+  border-radius: 10px;
+  color: #000;
+  display: flex;
+  overflow: hidden;
+}
+
+.card-image {
+  display: block;
+  object-fit: cover;
+  width: 35%;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 16px;
+  width: 100%;
+}
+
+.card-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 24px;
+  margin: 8px 0;
+}
+
 .author {
   display: flex;
   align-items: center;
@@ -157,11 +189,6 @@ body {
   height: 50px;
   width: 50px;
   margin-right: 10px;
-}
-
-.author-link {
-  color: #FFF;
-  text-decoration: none;
 }
 
 .author-link:focus, .author-link:hover {
@@ -176,3 +203,4 @@ body {
 .grid-col-2 {
   grid-template-columns: repeat(2, 1fr);
 }
+

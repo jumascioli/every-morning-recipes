@@ -125,3 +125,15 @@ entre linhas e colunas contidas em um elemento com `display-grid`
 - idealmente criamos classe com estilos desacoplados para reutilização de 
 código, exemplo: classe `.grid` sabe estilizar um grid, classe `.grid-col-2`
 diz quantas colunas tem o grid
+
+## Aula 9
+
+- o valor `inherit` é utilizado para herdar o valor de alguma propriedade de um 
+elemento ancestral que tenha declarado tal propriedade
+- utilize as pseudo-classes `:hover` e `:focus` preferivelmente em elementos
+focáveis, ou seja, que sejam navegáveis através do teclado: `<a>`, `<button>`
+- é possível utilizar features experimentais no CSS utilizando vendor preffix,
+exemplo `display: -webkit-box`
+- quando uma feature se torna especificação, o vendor preffix não é mais obrigatório
+- podemos utilizar features experimentais em orodução contanto que não haja quebra
+de layout
