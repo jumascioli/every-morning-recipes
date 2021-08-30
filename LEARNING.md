@@ -137,3 +137,72 @@ exemplo `display: -webkit-box`
 - quando uma feature se torna especificação, o vendor preffix não é mais obrigatório
 - podemos utilizar features experimentais em orodução contanto que não haja quebra
 de layout
+
+## Aula 10
+
+- a sigla BEM vem de: block, element e modifier
+- o BEM é uma metodologia que estabelece uma convenção de nomes para classes CSS:
+`.block`, `.block__element`, `.block--modifier`, `.block__element--modifier`
+- block é o elemento pai, que dá significado ao component, por exemplo `.header`
+- element é uma parte que compõe um bloco, por exemplo `.header__title`
+- um block pode ser composto por outros blocks
+- não crie muita dependência entre elementos, exemplo 
+`.social-media__list__item__link`
+- os estilos de um bloco devem ser autocontidos e não devem depender de estilos de
+blocos ou elementos externos
+- um modifier aplica um estilo que modifica alguma propriedade de um bloco ou elemento
+- o BEM não estabelece um padrão de nomenclatura para modifiers globais, exemplo `.text-center`
+- o BEM traz como benefício a modularidade, reusabilidade e estruturação dos nossos 
+components
+- blocos bem escritos são como peças de Lego, qua vão se encaixando e compondo outros blocos 
+e assim formam o layout
+- a metodologia BEM fornece ao nosso código CSS uma estrutura sólida que se mantém simples
+e fácil de entender
+
+## Aula 11
+
+- as unidades de medida `em` e `rem` são relativas e se baseiam no tamanho da letra M
+da font utilizada na página
+- elementos que utilizam `em` irão sempre se basear no `font-size` declarado em algum
+elemento ancestral
+- caso nenhum elemento ancestral e nem o `body` esteja com o `font-size` declarado,
+o elemento irá se basear no `font-size` default do browser
+- os elementos que utilizam `rem` irão sempre se basear no `font-size` declarado no elemento
+raiz, ou seja o `<html>`
+- o `font-size` default dos browsers é `font-size: 100%` que é equivalente à 16px
+- se quisermos saber em % qual seria o `font-size` de 10px, basta aplicar uma regra de 3
+
+```
+16 -> 100%
+10 -> x = 65.2%
+```
+
+- o cálculo para conversão de `px` para `em` ou `rem` é bem simples, basta pegar o número
+que deseja converter, e dividir pelo font-size base
+
+```
+valor / base
+20px / 16px = 1.25em ou 1.25rem
+```
+
+- e para fazer o inverso, `em` ou `rem` para `px`, basta multiplicar
+
+```
+valor * base
+2em ou 2rem * 16px = 20px
+```
+
+- utilize a base 10px para simplificar o cálculo `20px / 10px = 2em ou 2rem`
+- `em` e `rem` são escaláveis, o que possibilita com poucas linhas de código aumentar
+ou diminuir as dimensões, espaçamentos e tamanhos de font
+- media queries possibilitam aplicar um CSS específico para um tipo de mídia,
+seja um tamaho de tela específico, impressão, TV, orientação do device
+(portrait ou landscape) ...
+- há diversos tipos de media queries: `screen`, `print`, `tv`, `monochrome` ...
+- é possível utilizar os operadores lógicos: `not`, `and` e `only`
+- podemos inserir diversar regras em uma media querie
+`@media (min-width: 769px) and (orientation: landscape)`
+- media queries são fundamentais no desenvolvimento de aplicações mobile first,
+ou seja, que são desenvolvidas com foco no mobile e, através das media queries
+vamos alterando os estilos para telas maiores
+

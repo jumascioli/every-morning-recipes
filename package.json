@@ -1,0 +1,30 @@
+{
+  "name": "every-morning-recipes",
+  "version": "1.0.0",
+  "description": "a simple project to learn about HTML and CSS",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jumascioli/every-morning-recipes.git"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "flex-box",
+    "mobile",
+    "first",
+    "blog"
+  ],
+  "author": "jumascioli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jumascioli/every-morning-recipes/issues"
+  },
+  "homepage": "https://github.com/jumascioli/every-morning-recipes#readme",
+  "devDependencies": {
+    "http-server": "^13.0.1"
+  }
+}
